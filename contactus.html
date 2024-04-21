@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Pursuit</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style> body { border: solid 1px;} </style>
+    <!--font awesome-->
+</head>
+
+<body>
+    <header>
+        <!-- navbar -->
+        <nav class="header flex container relative">
+            <!-- main brand logo -->
+
+            <a class="brand grid" href="./index.html">
+                <img src="./assets/images/" alt="" class="brand_icon">
+                <div>
+                   <span>Digital Pursuit</span><br>
+                    <span class='brand_solutions'></span>
+                </div>
+            </a>
+
+            <!--mobile nav toggle-->
+            <label class="hamburger_icon" for="toggle"><i class="fa fa-bars"></i></label>
+            <input type="checkbox" id="toggle" hidden>
+
+            <ul class=" nav_items flex">
+                <li><a class="nav_item" href="./index.html">Home</a></li>
+                <li><a class="nav_item" href="./about.html">About Us</a></li>
+                <li><a class="nav_item" href="./services.html">Services</a></li>
+                <li><a aria-current="page" class="nav_item" href="./contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+<br>
+<!-- hero section -->
+<section id="hero" class="hero flex row">
+    <div class="main_text flex row">
+        <h1 class="main_title">Contact Us</h1>
+        <a href="#contact" class="btn btn_pry cta">Get In Touch</a>
+    </div>
+
+</section>
+<br>
+<h3 class="section_title">Where to find us:</h3>
+<br>
+<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="90%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=660&amp;height=448&amp;hl=en&amp;q=InternationalBusinessGatewayPark city&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div><style>.mapouter{position:relative;text-align:center;;width:100%;height:448px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:448px;}.gmap_iframe {height:448px!important;}</style></div>
+
+
+
+<section id="contact" class="contact container flex row section_spacing">
+    <h3 class="section_title">Get In Touch:</h3>
+    <p class="section_text">Ready to transform your business with innovative technology solutions? Fill out the form below to get in touch with Digital Pursuit. Our team is here to help you find the perfect IT solution for your needs.</p>
+
+    <!-- form  -->
+    <div class="form_block grid">
+      <form action="https://formsubmit.co/leeann@digitalpursuit.co.za" method="POST">
+            <div class="form_field">
+                <label for="fname">First Name</label>
+                <input type="text" name="name" id="fname" required>
+            </div>
+            <div class="form_field">
+                <label for="lname">Last Name</label>
+                <input type="text" name="name" id="lname" required>
+            </div>
+            <div class="form_field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form_field">
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" required>
+            </div>
+            <div class="form_field">
+                <label for="message">How can we help you?</label>
+                <input type="text" name="message" id="message" required>
+            </div>
+            <button type="submit"class="btn btn_pry">Send Message</button>
+        </form>
+
+    </div>
+
+    <h2 class="section_title">Our Contact Details:</h2>
+
+          <div class="container">
+            <style>
+            p {text-align: center;}
+            </style>
+          <h4 class="paragraph" style = "float: left;"><b>Managing Director:</b><br><br>Lee-Ann Harris <br><br> <i class="fa fa-envelope" style="font-size:24px"></i> : leeann@digitalpursuit.co.za <br> <br><i class="fa fa-phone" style="font-size:24px"></i> : (+27)83-214-5704</h4>
+          <h4 class="paragraph"style = "float: right;"><b>Sales Director:<b/><br><br>Abduragmaan Baulackey <br><br> <i class="fa fa-envelope" style="font-size:24px"></i> : abduragmaan.baulackey@digitalpursuit.co.za <br> <br><i class="fa fa-phone" style="font-size:24px"></i> : (+27)71-545-2511</h4>
+      </div>
+
+
+</section>
+
+
+<footer class="flex row">
+    <!-- footer nav  -->
+    <nav class="footer_nav flex row">
+        <!-- main brand logo -->
+        <div class="brand flex">
+          <!--  <img src="./assets/images/dplogo.svg" alt="brand logo" class="brand_icon"> -->
+          <div class="">
+
+                  <span>Digital Pursuit</span><br> Future Ready
+
+
+          </div>
+        </div>
+        <ul class=" footer_nav_items flex row">
+            <li class="footer_nav_items_title">Navigation Menu: <br> </li>
+            <li><a class="nav_item" href="./index.html">Home</a></li>
+            <li><a class="nav_item" href="./about.html">About Us</a></li>
+            <li><a class="nav_item" href="./services.html">Services</a></li>
+            <li><a class="nav_item" href="./contactus.html">Contact Us</a></li>
+            <li><a class="nav_item btn btn_pry cta" href="#contact">Get In Touch</a></li>
+        </ul>
+    </nav>
+    <p>©2024 Digital Pursuit. All rights reserved</p>
+</footer>
