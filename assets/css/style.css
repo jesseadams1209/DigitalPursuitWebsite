@@ -1,0 +1,625 @@
+/* import google font family  */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Poppins&family=Roboto:wght@300&display=swap');
+
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav>ul>li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--clr-pry);
+    color: var(Black);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+/* root variable declarations */
+:root {
+    /* colors  */
+    --clr-pry: #e0e8ea;
+    --clr-pry-light: #fcfcfc;
+    --clr-sec: #333;
+    --clr-accent-light: rgb(9, 31, 70);
+    --clr-accent-transparent: rgb(232, 110, 75);
+    --clr-accent-dark: rgb(232, 110, 75);
+    --clr-gradient: linear-gradient(180deg, rgba(38, 100, 162, 0.7) 0%, rgba(0, 153, 204, 0.8) 100%);
+    /* typography sizing  */
+
+    --text-2xs: 0.75rem;
+    --text-xs: 0.875rem;
+    --text-sm: 1rem;
+    --text-md: 1.5rem;
+    --text-lg: 1.875rem;
+    --text-xl: 3rem;
+    --text-2xl: 3.75rem;
+    /* box-shadows  */
+    --shadow-hover: 0px 14px 19px -6px rgb(232, 110, 75);
+}
+
+/* typography */
+h1,
+.main_title {
+    font-size: var(--text-2xl);
+}
+
+h2 {
+    font-size: var(--text-lg);
+}
+
+h3 {
+    font-size: var(--text-md);
+}
+
+h4 {
+    font-size: var(--text-sm);
+}
+
+p,
+span,
+li {
+    font-size: var(--text-sm);
+
+}
+
+.section_title {
+    font-size: var(--text-lg);
+    text-align: center;
+    color: var(Black);
+    /* z-index: 20 ; */
+}
+
+.section_text {
+    font-size: var(--text-sm);
+    text-align: center;
+    color: Black;
+    /* z-index:20; */
+
+}
+
+.card_title {
+    font-size: var(--text-sm);
+}
+
+.card_text {
+    font-size: var(--text-xs);
+}
+
+/* boxes, containers & sections*/
+.container {
+    width: 85%;
+    min-width: 300px;
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
+.section_spacing {
+    /* to space sections */
+    padding: 3rem 0;
+    gap: 2rem;
+}
+
+/* general classifications classes */
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.row {
+    flex-direction: column;
+}
+
+.column {
+    flex-direction: row;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* header and nav  */
+header {
+    width: 100vw;
+    margin-top: 1.5rem
+}
+
+.header {
+    justify-content: space-between;
+    /* z-index: 10; */
+}
+
+/* brand logo and text  */
+.brand {
+    grid-template-columns: 0px 1fr;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.brand span {
+    /* bytesized logo text */
+    color: var(--clr-accent-light);
+    font-size: 1.3rem;
+}
+.brand:hover {
+   transform: scale(1.01);
+}
+
+.nav_items {
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav_item {
+    padding: 1rem 1.5rem;
+    transition: ease 0.4s;
+}
+
+.nav_item:hover {
+    color: var(--clr-accent-light);
+}
+
+.hamburger_icon {
+    display: none;
+}
+
+
+/* current page highlight */
+[aria-current='page'] {
+    color: var(--clr-accent-light);
+    border-bottom: 2px solid var(--clr-accent-light);
+    padding-bottom: 5px;
+
+}
+
+/* hero section  */
+.hero {
+    background-color: var(--clr-accent-light);
+    background-image: url(../../assets/images/earth.jpg);
+    background-size: cover;
+    background-position: 0 20%;
+    color: var(--clr-pry);
+    width: 100vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 20%;
+}
+
+.hero2 {
+    height: 30vh;
+}
+
+.main_text {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    /* color: var(--clr-pry-light) */
+}
+
+/* who are we section  */
+.services_cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3px;
+    justify-content: center;
+    margin: 3rem 0;
+    padding: 2rem;
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* why choose us section  */
+.offer {
+    padding: 0 !important;
+    background-color: var(--clr-accent-transparent) !important;
+}
+
+.offer img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* case studies section  */
+.case_studies {
+    overflow-x: hidden;
+}
+
+/* cards */
+.card {
+    background-color: var(--clr-pry-light);
+    padding: 3rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: var(--shadow-hover);
+
+}
+
+.card_image {
+    background-color: var(--clr-accent-dark);
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.case_carousel {
+    margin: 6rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 4px;
+}
+
+.case_card {
+    grid-template-columns: 60% 40%;
+    background-color: var(--clr-pry-light);
+}
+
+.card_article {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.case_card:hover card
+
+/* contact section  */
+.form_block {
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 4rem;
+    outline:1px solid orange;
+}
+
+.side_form {
+    background-color: var(--clr-accent-light);
+    padding: 3rem;
+}
+
+form {
+    padding: 2rem;
+    background-color: var(--clr-pry-light);
+}
+
+/* who we are section  */
+.about {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* form input field */
+.form_field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+.form_field label {
+    font-size: var(--text-2xs);
+    text-transform: uppercase;
+    color: var(--clr-accent-light);
+}
+
+input {
+    background: var(--clr-pry);
+    border: none;
+    border-bottom: 2px solid var(--clr-accent-light);
+    height: 2rem;
+    border-radius: 5px;
+    padding: 0 0.5rem;
+}
+
+input:hover,
+input:active {
+    background-color: var(--clr-pry-light);
+}
+
+#message {
+    height: 12rem;
+    margin-bottom: 1.5rem;
+}
+
+/* buttons */
+.btn {
+    text-transform: uppercase;
+    transition: ease 0.4s;
+}
+
+.btn_pry {
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 0.7rem 1.2rem;
+    border: 1px solid var(--clr-accent-light);
+    /* background-color: var(--clr-accent-light); */
+    color: var(--clr-accent-light);
+}
+
+.btn_pry:hover {
+    background-color: var(--clr-accent-light);
+    color: var(--clr-pry-light);
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.01);
+
+}
+
+.btn_sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-sec);
+    gap: 0.5rem;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--clr-accent-light);
+
+}
+
+.btn_sec:hover {
+    gap: 0.9rem;
+    border-bottom: 2px solid var(--clr-accent-light);
+    background-color: var(--clr-accent-transparent);
+
+}
+
+.card_btn {
+    font-size: var(--text-xs);
+
+}
+
+.card:hover .card_btn {
+    background-color: ;
+    gap: 0.9rem;
+    border-bottom: 2px solid var(--clr-accent-light);
+}
+
+.cta {
+    border: 1px solid var(--clr-pry-light);
+    color: var(--clr-pry-light);
+    margin-top: 3rem;
+    /* z-index: 20; */
+}
+
+.cta:hover {
+    border: none;
+    transform: scale(1.01);
+    border: 2px solid rgba(156, 219, 255, 0.7);
+
+}
+
+/* get in touch banner */
+.cta_banner {
+    background-color: var(--clr-accent-light);
+    background-image: url(../../assets/images/wave.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem 20%;
+    color: var(--clr-pry-light);
+}
+
+.cta_banner .section_title {
+    color: var(--clr-pry-light);
+
+}
+
+/* footer  */
+footer {
+    background-image: url(../../assets/images/wave.svg);
+    padding: 2rem 0;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(9, 31, 70);
+    color: var(--clr-pry-light);
+}
+
+/* footer nav  */
+footer .brand {
+    align-items: center;
+    gap: 5px;
+}
+
+footer .brand span {
+    /* bytesized logo text */
+    color: var(--clr-pry-light);
+    font-size: 1.3rem;
+}
+
+footer .brand h1 {
+    text-transform: uppercase;
+    font-size: var(--text-xs);
+    letter-spacing: 2px;
+}
+
+.footer_nav {
+    gap: 3rem;
+}
+
+/* footer get in touch button  */
+.footer_nav_items .btn {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer_nav .nav_items {
+    font-size: var(--text-xs);
+    font-weight: 200;
+
+}
+
+.footer_nav_items_title {
+    text-transform: uppercase;
+}
+
+/* media queries */
+@media (max-width:855px) {
+    .nav_items {
+        display: flex;
+        width: 100vw;
+        height: 0vh;
+        transition: ease 0.5s;
+        position: absolute;
+        gap: 2rem;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--clr-pry-light);
+        z-index:30;
+    }
+
+
+    /* change flex direction for mobile menu  */
+    .header {
+        align-items: center;
+    }
+
+    /* mobile menu icon  */
+    .hamburger_icon {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    /* toggle mobile menu  */
+    #toggle:checked ~ .nav_items {
+        opacity:1;
+        height: 100vh;
+
+    }
+
+    .case_card {
+        /* change direction flow of case card  */
+        grid-template-columns: 1fr;
+    }
+
+    .card_image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+
+    }
+    .about_services {
+        grid-template-columns:1fr;
+    }
+    .services_page_articles {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+
+}
+
+/* ====== ABOUT PAGE ====== */
+
+/* services  */
+.services_page_articles {
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+.services_article_block{
+    gap:2rem;
+    margin-top: 2rem;
+}
+
+.article_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+hr{
+    border:1px solid var(--clr-accent-light);
+}
+
+.container {
+   width: 100%;
+   overflow: hidden; /* Clears float */
+ }
+ .paragraph {
+   text-align: center;
+   width: 45%; /* Adjust as needed */
+
+   margin: 0 2.5%; /* Add margin between paragraphs */
+ }
+
+/* ====== PROJECTS PAGE  ======*/
+.sub_title {
+    font-size: var(--text-md);
+}
+
+.article_text {
+    font-size: var(--text-sm);
+}
